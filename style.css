@@ -1,7 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap");
+
+:root {
+  --Roboto: "Roboto", sans-serif;
+  --Oswald: "Oswald", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+i,
+ol,
+div,
+img {
+  margin: 0;
+  padding: 0;
+}
+
 .mainbox {
   justify-content: center;
   height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
+  font-family: var(--Roboto);
+}
+
+body {
+  background: linear-gradient(
+    to right top,
+    #5d3587,
+    #6f4191,
+    #804d9c,
+    #925aa6,
+    #a367b1
+  );
+}
+
+.title {
+  position: relative;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 45px;
+  padding-bottom: 20px;
+  z-index: 1;
+}
+
+h3 {
+  position: absolute;
+  color: #acaaaa;
+  position: absolute;
+  font-size: 45px;
+  padding-bottom: 20px;
+  top: 3px;
+  z-index: -1;
+}
+
+input {
+  padding: 15px 25px;
+  font-size: 20px;
+  color: #750e21;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-family: var(--Oswald);
+}
+
+.gBtn {
+  background: linear-gradient(
+    to right top,
+    #7d0a0a,
+    #8d1514,
+    #9d1f1d,
+    #ae2827,
+    #bf3131
+  );
+  border: 0;
+  height: 35px;
+  width: 120px;
+  color: #ffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.gBtn:hover {
+  background: linear-gradient(
+    to right top,
+    #bf3131,
+    #ae2827,
+    #9d1f1d,
+    #8d1514,
+    #7d0a0a
+  );
+}
+
+.copyBtn {
+  background: linear-gradient(
+    to right top,
+    #ff9800,
+    #f47d18,
+    #e56325,
+    #d44a2c,
+    #bf3131
+  );
+  border: 0;
+  height: 35px;
+  width: 120px;
+  color: #ffff;
+  font-weight: 600;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+
+.copyBtn:hover {
+  background: linear-gradient(
+    to right top,
+    #bf3131,
+    #d44a2c,
+    #e56325,
+    #f47d18,
+    #ff9800
+  );
+}
+
+.btn {
+  padding-top: 25px;
 }
