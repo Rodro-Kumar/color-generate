@@ -35,17 +35,18 @@ const output = document.querySelector(".colorCode");
 const genBtn = document.querySelector(".gBtn");
 const copyBtn = document.querySelector(".copyBtn");
 
-const codeLen = 6;
+genBtn.onclick = function () {
+  const red = Math.floor(Math.random() * 255);
+  const green = Math.ceil(Math.random() * 255);
+  const blue = Math.floor(Math.random() * 255);
+  let color = `rgb(${red} , ${green} , ${blue})`;
+  body.style.background = color;
+  output.value = color;
+  genBtn.style.background = "#B80000";
+};
 
-genBtn.addEventListener("click", function () {
-  const hash = "#";
-  const lowerCase = "abcdefghijklmnopqrstuvwxyz";
-  const number = "1234567890";
-  let color = hash + lowerCase + number;
-
-  while (color.length <= codeLen) {
-    color += color[Math.floor(Math.random() * color.length)];
-  }
-
-  console.log(color);
-});
+copyBtn.onclick = function () {
+  navigator.clipboard.writeText(output.value);
+  copyBtn.innerHTML = "Copied";
+  output.value = "copied";
+};
